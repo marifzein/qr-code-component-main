@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Card</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Outfit", sans-serif;
+        background-color: #e0e8f9; /* Latar belakang biru muda */
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        text-align: center;
+        padding: 20px;
+        /*background-color: hsl(0, 0%, 100%);*/
+      }
+      .card {
+        /*background-color: #2c7dfa;  Latar belakang kartu biru */
+        background-color: hsl(0, 0%, 100%);
+        width: 260px; /* Lebar kartu */
+        padding: 15px;
+        border-radius: 15px; /* Sudut melengkung */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden; /* Memastikan konten tidak meluber */
+      }
+      .qr-code {
+        width: 70%; /* QR Code mengisi lebar kartu */
+        height: auto; /* Menjaga rasio aspek */
+        border-radius: 10px; /* Sudut melengkung untuk QR Code */
+      }
+      .text {
+        color: black;
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      .text b {
+        font-weight: 700; /* Bold untuk teks utama */
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .parag {
+        width: 200px;
+        font-size: 11px;
+        background-color: red;
+        /* text-align: center; */
+      }
+      /* Media Query untuk Mobile (max-width: 375px) */
+      @media (max-width: 375px) {
+        .card {
+          width: 90%; /* Lebar lebih fleksibel di mobile */
+          margin: 0 auto; /* Memastikan tetap di tengah */
+        }
+        .text {
+          font-size: 14px; /* Ukuran font sedikit lebih kecil di mobile */
+        }
+      }
+
+      /* Media Query untuk Desktop (min-width: 1440px) */
+      @media (min-width: 1440px) {
+        .card {
+          width: 300px; /* Tetap 300px di desktop */
+        }
+        .text {
+          font-size: 16px; /* Ukuran font standar di desktop */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="./images/image-qr-code.png" alt="QR Code" class="qr-code" />
+        <div class="text">
+          <b>Improve your front-end skills by building projects</b><br />
+        </div>
+        <div class="parag">
+          Scan the QR code to visit Frontend Mentor and take your coding skills
+          to the next level
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Arif Zein</a>.
+      </div>
+    </div>
+  </body>
+</html>
